@@ -2,6 +2,7 @@
 import os
 import time
 import re
+from sys import exit
 
 def measure_temp():
 	'''Gets cpu temperature and converts string to raw digits with regex'''
@@ -16,4 +17,5 @@ try:
 		time.sleep(1)
 except ValueError:
 	print("Value returned from \"vcgencmd measure_temp\" was not a number")
+	exit
 	
