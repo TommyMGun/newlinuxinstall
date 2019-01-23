@@ -10,7 +10,10 @@ def measure_temp():
 	tempc = float(''.join(nums))
 	tempf = tempc*1.8+32
 	print('{:.4} Freedom Units\n'.format(tempf))
-
-while True:
-	measure_temp()
-	time.sleep(1)
+try:
+	while True:
+		measure_temp()
+		time.sleep(1)
+except ValueError:
+	print("Value returned from \"vcgencmd measure_temp\" was not a number")
+	
