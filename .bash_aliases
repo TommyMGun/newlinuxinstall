@@ -4,3 +4,4 @@ alias upgrade="sudo apt update && sudo apt upgrade -y;sudo pacman -Syu"
 alias cd~="cd ~"
 alias ld=ls
 alias sudi=sudo
+alias aliases="vim ~/.bash_aliases"
